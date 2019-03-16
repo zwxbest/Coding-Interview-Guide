@@ -1,9 +1,9 @@
-package cp01;
+package cp01._01;
 
 import java.util.Stack;
 
 /**
- * min和data的元素数量相等，每次pop时始终对min进行pop
+ * min和data的元素数量相等，每次pop时始终对min进行pop，压入费时间
  * Created by zwxbest on 2019/3/16.
  */
 public class StackWithMin2<E extends Comparable<E>> implements StackWithMin<E> {

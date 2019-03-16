@@ -1,6 +1,7 @@
-package cp01;
+package cp01._01;
 
 import base.BaseTest;
+import cp01._01.StackWithMin;
 import org.junit.Test;
 
 /**
@@ -8,10 +9,12 @@ import org.junit.Test;
  */
 public class StackWithMinTest extends BaseTest {
 
+    protected static StackWithMin<Integer> stackWithMin;
     /**
      * 相同数据
      */
-    public  void testSame(StackWithMin<Integer> stackWithMin ){
+    @Test
+    public  void testSame( ){
         stackWithMin.push(1);
         stackWithMin.push(1);
         stackWithMin.push(1);
@@ -35,7 +38,8 @@ public class StackWithMinTest extends BaseTest {
     /**
      * 正序
      */
-    public void testAsc(StackWithMin<Integer> stackWithMin){
+    @Test
+    public void testAsc(){
         stackWithMin.push(1);
         stackWithMin.push(2);
         stackWithMin.push(3);
@@ -58,7 +62,8 @@ public class StackWithMinTest extends BaseTest {
     /**
      * 倒序
      */
-    public void testDesc(StackWithMin<Integer> stackWithMin){
+    @Test
+    public void testDesc(){
         stackWithMin.push(3);
         stackWithMin.push(2);
         stackWithMin.push(1);
@@ -81,7 +86,8 @@ public class StackWithMinTest extends BaseTest {
     /**
      * 随机
      */
-    public void testRandom(StackWithMin<Integer> stackWithMin){
+    @Test
+    public void testRandom(){
         stackWithMin.push(2);
         stackWithMin.push(1);
         stackWithMin.push(3);

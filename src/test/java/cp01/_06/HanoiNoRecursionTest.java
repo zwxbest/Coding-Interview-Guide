@@ -10,7 +10,7 @@ public class HanoiNoRecursionTest extends HanoiTest {
 
     @BeforeClass
     public static void beforeClass() {
-        hanoi = new HanoiRecursion();
+        hanoi = new HanoiNoRecursion();
     }
 
     @Test

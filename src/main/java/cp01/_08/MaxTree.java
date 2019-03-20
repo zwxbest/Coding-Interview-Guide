@@ -1,109 +1,97 @@
 package cp01._08;
 
-import com.sun.deploy.resources.Deployment_sv;
-import lombok.Getter;
-import lombok.Setter;
-
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
 /**
- * Created by zwxbest on 2019/3/19.
+ * 和搜索二叉树的区别是没有规定左边小右边大
+ *
+ * 中序遍历可得到原数组的从小到大排序
+ *
+ * @author zhangweixiao - 19-3-19
  */
 public class MaxTree {
 
-    @Getter
-    @Setter
-    static class Node {
-        private int value;
-        private Node left;
-        private Node right;
 
-        public Node(int value) {
-            this.value = value;
-        }
-    }
+    //stack从顶到底,从左到右,从大到小
+    //每次pop的时候计算被pop的左边或者右边第一个大的
+    //比如 1 2 3,push 1,pop 1,push 2,pop 2,push 3,pop 3
+    //比如 3 2 1,push 3,push 2,push 1
+    //stack需要在遇到比栈顶大的值的时候就pop出栈顶
+    //比如 5 2 1 4,遇到4的时候pop 2,pop 1,保留5,这样4左边第一个大的是5
+    //不能提前计算.比如上面,如果提前计算,pop出5,那4就找不到5了
+    //因为stack不能遍历
+    private Stack<Node> stack = new Stack<>();
 
-    //stack从栈顶到栈底，保持从小到大的顺序
-    Stack<Node> stack = new Stack<>();
-    //value为左边第一比key大的值
-    Map<Node, Node> lBigMap = new HashMap<>();
-    Map<Node, Node> rBigMap = new HashMap<>();
+    private HashMap<Node, Node> lBigMap = new HashMap<>();
 
-    public Node getMaxTree1(int[] arr) {
-        //初始化
+    private HashMap<Node, Node> rBigMap = new HashMap<>();
+
+    public Node getMaxTree(int[] arr) {
+        //初始化node
         Node[] nodes = new Node[arr.length];
         for (int i = 0; i < arr.length; i++) {
             nodes[i] = new Node(arr[i]);
         }
+
         for (int i = 0; i < arr.length; i++) {
             Node curNode = nodes[i];
-            if(stack.isEmpty()){
-                lBigMap.put(curNode,null);
-            }else {
-                Node pop = stack.pop();
-                if(pop.getValue() < curNode.getValue()){
-                    lBigMap.put(curNode,null);
-                }else {
-                    lBigMap.put(curNode,pop);
-                }
+            while ((!stack.isEmpty()) && stack.peek().value < curNode.value) {
+                popAndSet(stack, lBigMap);
             }
             stack.push(curNode);
         }
-        stack.clear();
+        while (!stack.isEmpty()) {
+            popAndSet(stack, lBigMap);
+        }
+
         for (int i = arr.length - 1; i >= 0; i--) {
             Node curNode = nodes[i];
-            if(stack.isEmpty()){
-                rBigMap.put(curNode,null);
-            }else{
-                Node pop = stack.pop();
-                if(pop.getValue() < curNode.getValue()){
-                    rBigMap.put(curNode,null);
-                }else {
-                    rBigMap.put(curNode,pop);
-                }
+            while ((!stack.isEmpty()) && stack.peek().value < curNode.value) {
+                popAndSet(stack, rBigMap);
             }
             stack.push(curNode);
         }
-        //根据rBigMap和lBigMap构造二叉树
+        while (!stack.isEmpty()) {
+            popAndSet(stack, rBigMap);
+        }
         Node head = null;
         for (int i = 0; i < arr.length; i++) {
             Node curNode = nodes[i];
             Node lParent = lBigMap.get(curNode);
             Node rParent = rBigMap.get(curNode);
-            if(lParent == null && rParent == null){
+            if (lParent == null && rParent == null) {
+                //最大值,作为头
                 head = curNode;
-            } else if(lParent == null){
-                if(rParent.left == null){
-                    rParent.left = curNode;
-                }else {
-                    rParent.right = curNode;
-                }
-            }else if(rParent == null){
-                if(lParent.left == null){
-                    lParent.left = curNode;
-                }else {
-                    lParent.right = curNode;
-                }
-            }else {
-                Node parent = lParent.getValue()<rParent.getValue()?lParent:rParent;
-                if(parent.left == null){
-                    parent.left = curNode;
-                }else {
-                    parent.right = curNode;
-                }
+            } else if (lParent == null) {
+                setChild(rParent, curNode);
+            } else if (rParent == null) {
+                setChild(lParent, curNode);
+            } else {
+                Node parent = lParent.value < rParent.value ? lParent : rParent;
+                setChild(parent, curNode);
             }
         }
         return head;
+
     }
 
-    public static void main(String[] args) {
-        MaxTree maxTree = new MaxTree();
-//        maxTree.getMaxTree(new int[]{1,2,3,4,5});
-//        maxTree.getMaxTree(new int[]{5,4,3,2,1});
-        MaxTree maxTree1 = new MaxTree();
-        Node maxTree11 = maxTree1.getMaxTree1(new int[]{5, 4, 3, 2, 6});
-        System.out.println(1);
+
+    private void setChild(Node parent, Node curNode) {
+        if (parent.left == null) {
+            parent.left = curNode;
+        } else {
+            parent.right = curNode;
+        }
+    }
+
+    private void popAndSet(Stack<Node> stack, Map<Node, Node> map) {
+        Node pop = stack.pop();
+        if (stack.isEmpty()) {
+            map.put(pop, null);
+        } else {
+            map.put(pop, stack.peek());
+        }
     }
 }

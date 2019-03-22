@@ -3,6 +3,8 @@ package cp01._07;
 import java.util.LinkedList;
 
 /**
+ * 生成窗口最大值数组
+ *
  * 为什么选择用双端队列 ?因为头部要保存最大的,需要pop以及peek操作.尾部要保持最近的,需要push操作
  *
  * 为什么将下标存进去? 因为要计算长度

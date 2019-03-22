@@ -5,6 +5,8 @@ import java.util.Map;
 import java.util.Stack;
 
 /**
+ * 构造数组的MaxTree
+ *
  * 和搜索二叉树的区别是没有规定左边小右边大
  *
  * 中序遍历可得到原数组的从小到大排序

@@ -4,6 +4,8 @@ import java.util.Deque;
 import java.util.LinkedList;
 
 /**
+ * 最大值减去最小值小 于或 等 于 nu m的子数组数量
+ *
  * Created by zwxbest on 2019/3/21.
  */
 public class MaxMinSubArrayCount {

@@ -3,6 +3,7 @@ package cp01._05;
 import java.util.Stack;
 
 /**
+ * 用一个栈实现另一个栈的排序
  * @author zhangweixiao - 19-3-18
  */
 public class StackSortByStack<E extends Comparable<E>> {

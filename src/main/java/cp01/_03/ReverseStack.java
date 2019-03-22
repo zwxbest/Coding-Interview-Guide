@@ -3,6 +3,8 @@ package cp01._03;
 import java.util.Stack;
 
 /**
+ * 如何仅用递归函数和栈操作逆序一个栈
+ *
  * @author zhangweixiao - 19-3-18
  */
 public class ReverseStack<E>  {

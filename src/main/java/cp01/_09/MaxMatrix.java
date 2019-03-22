@@ -3,6 +3,8 @@ package cp01._09;
 import java.util.Stack;
 
 /**
+ * 求最大子矩阵的大小
+ *
  * 第二步maxRecFromBottom,找最有第一个小于当前值,和MaxTree很像,区别是maxTree需要保存关系
  *
  * maxTree是找左右第一个大的值,这个找一边就够了

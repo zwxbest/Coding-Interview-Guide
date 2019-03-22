@@ -1,7 +1,6 @@
 package cp01._09;
 
 import base.BaseTest;
-import java.util.Stack;
 import org.junit.Test;
 
 /**

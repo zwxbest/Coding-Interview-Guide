@@ -1,6 +1,7 @@
 package cp02._02;
 
 import base.BaseTest;
+import cp02.node.DoubleNode;
 import org.junit.Test;
 
 public class RemoveLastKNodeTest2 extends BaseTest {

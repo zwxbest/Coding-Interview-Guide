@@ -2,11 +2,13 @@ package cp01._01;
 
 import base.BaseTest;
 import cp01._01.StackWithMin;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  * Created by zwxbest on 2019/3/16.
  */
+@Ignore
 public class StackWithMinTest extends BaseTest {
 
     protected static StackWithMin<Integer> stackWithMin;

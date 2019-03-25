@@ -2,12 +2,14 @@ package cp01._02;
 
 import base.BaseTest;
 import cp01._01.StackWithMinTest;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
  * Created by zwxbest on 2019/3/16.
  */
-public class TwoStackQueueTest<E>  extends BaseTest{
+@Ignore
+public class TwoStackQueueTest  extends BaseTest{
 
     protected static TwoStackQueue<Integer> twoStackQueue;
 

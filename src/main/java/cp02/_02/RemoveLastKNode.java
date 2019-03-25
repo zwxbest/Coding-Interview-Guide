@@ -1,12 +1,15 @@
 package cp02._02;
 
+import cp02.node.DoubleNode;
+import cp02.node.Node;
+
 /**
  * 在单链表和双链表中删除倒数第K个节点
  * @author zhangweixiao - 19-3-22
  */
 public class RemoveLastKNode {
 
-    public  Node removeLastKthNode(Node head,int lastKth){
+    public Node removeLastKthNode(Node head,int lastKth){
         if(head == null || lastKth < 1){
             return head;
         }
@@ -32,7 +35,7 @@ public class RemoveLastKNode {
         return head;
     }
 
-    public  DoubleNode removeLastKthNode(DoubleNode head,int lastKth){
+    public DoubleNode removeLastKthNode(DoubleNode head,int lastKth){
         if(head == null || lastKth < 1){
             return head;
         }

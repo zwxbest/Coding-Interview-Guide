@@ -11,7 +11,7 @@ import org.junit.Test;
 @Ignore
 public class RemoveMidNodeTest extends BaseTest {
 
-    protected static RemoveNode1 removeMidNode;
+    protected static RemoveMidNode1 removeMidNode;
 
     @Test
     public void test() {
@@ -82,4 +82,6 @@ public class RemoveMidNodeTest extends BaseTest {
         assertEqual(node.next.next.value, 4);
         assertEqual(node.next.next.next.value, 5);
     }
+
+
 }

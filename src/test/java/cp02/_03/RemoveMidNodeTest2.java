@@ -9,7 +9,7 @@ public class RemoveMidNodeTest2 extends RemoveMidNodeTest {
 
     @BeforeClass
     public static void BeforeClass(){
-        removeMidNode = new RemoveNode1();
+        removeMidNode = new RemoveMidNode1();
     }
 
 

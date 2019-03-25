@@ -5,7 +5,7 @@ import cp02.node.Node;
 /**
  * @author zhangweixiao - 19-3-25
  */
-public class RemoveNode2 implements RemoveNode {
+public class RemoveMidNode1 implements RemoveMidNode {
 
     @Override
     public Node removeMidNode(Node head) {
@@ -22,15 +22,14 @@ public class RemoveNode2 implements RemoveNode {
 
         //处理长度>=3的情况
         Node pre = head;
-        //删除节点
-        Node cur = head.next.next;
-        while (cur.next != null && cur.next.next != null) {
+        while (pre.next.next.next != null && pre.next.next.next.next != null) {
             pre = pre.next;
-            cur = cur.next.next;
         }
 
         pre.next = pre.next.next;
         return head;
     }
+
+
 
 }

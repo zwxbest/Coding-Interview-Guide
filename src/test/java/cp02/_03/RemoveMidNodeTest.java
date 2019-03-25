@@ -11,7 +11,7 @@ import org.junit.Test;
 @Ignore
 public class RemoveMidNodeTest extends BaseTest {
 
-    protected static RemoveMidNode1 removeMidNode;
+    protected static RemoveNode1 removeMidNode;
 
     @Test
     public void test() {

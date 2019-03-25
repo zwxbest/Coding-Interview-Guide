@@ -5,7 +5,7 @@ import cp02.node.Node;
 /**
  * @author zhangweixiao - 19-3-25
  */
-public class RemoveMidNode2 implements RemoveMidNode {
+public class RemoveNode2 implements RemoveNode {
 
     @Override
     public Node removeMidNode(Node head) {

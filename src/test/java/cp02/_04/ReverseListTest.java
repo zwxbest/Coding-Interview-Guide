@@ -1,6 +1,7 @@
 package cp02._04;
 
 import base.BaseTest;
+import cp02.node.DoubleNode;
 import cp02.node.Node;
 import org.junit.Test;
 
@@ -35,5 +36,21 @@ public class ReverseListTest extends BaseTest {
     public void test2() {
         Node head = reverseList.reverseList(null);
         assertEqual(head, null);
+    }
+
+    @Test
+    public void test3() {
+        DoubleNode head = new DoubleNode(1);
+        head.next = new DoubleNode(2);
+        head.next.last = head;
+        head.next.next = new DoubleNode(3);
+        head.next.last = head.next;
+        head = reverseList.reverseDoubleList(head);
+        assertEqual(head.value, 3);
+        assertEqual(head.next.value, 2);
+        assertEqual(head.next.last.value,3);
+        assertEqual(head.next.next.value, 1);
+        assertEqual(head.next.next.last.value,2);
+        assertEqual(head.next.next.next, null);
     }
 }

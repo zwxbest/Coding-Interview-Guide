@@ -7,9 +7,9 @@ import org.junit.Test;
 /**
  * @author zhangweixiao - 19-3-27
  */
-public class JosephusCircleTest extends BaseTest{
+public class josephusCircleTest extends BaseTest{
 
-    JosephusCircle josephusCircle = new JosephusCircle();
+    protected static JosephusCircle josephusCircle;
 
     @Test
     public void test(){

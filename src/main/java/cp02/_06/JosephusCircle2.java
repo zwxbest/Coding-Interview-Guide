@@ -1,6 +1,7 @@
 package cp02._06;
 
-import cp02.node.Node;
+
+import node.Node;
 
 /**
  * 环形单链表的约瑟夫问题

@@ -1,4 +1,4 @@
-package com.tuowazi.base.code_view_guide.cp01._02;
+package com.tuowazi.code_view_guide.cp01._02;
 
 /**
  * 由两个栈组成的队列

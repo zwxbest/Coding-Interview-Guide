@@ -1,4 +1,4 @@
-package com.tuowazi.base.code_view_guide.cp01._08;
+package com.tuowazi.code_view_guide.cp01._08;
 
 /**
  * @author zhangweixiao - 19-3-20

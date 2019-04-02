@@ -1,4 +1,4 @@
-package com.tuowazi.base.code_view_guide.cp01._01;
+package com.tuowazi.code_view_guide.cp01._01;
 
 import java.util.Stack;
 

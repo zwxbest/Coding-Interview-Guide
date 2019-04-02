@@ -1,4 +1,4 @@
-package com.tuowazi.base.code_view_guide.cp02._03;
+package com.tuowazi.code_view_guide.cp02._03;
 
 import node.Node;
 

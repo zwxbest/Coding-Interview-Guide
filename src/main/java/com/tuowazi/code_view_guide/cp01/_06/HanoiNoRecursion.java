@@ -1,4 +1,4 @@
-package com.tuowazi.base.code_view_guide.cp01._06;
+package com.tuowazi.code_view_guide.cp01._06;
 
 import java.util.ArrayList;
 import java.util.List;

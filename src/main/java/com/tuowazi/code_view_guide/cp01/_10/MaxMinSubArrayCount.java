@@ -1,4 +1,4 @@
-package com.tuowazi.base.code_view_guide.cp01._10;
+package com.tuowazi.code_view_guide.cp01._10;
 
 import java.util.Deque;
 import java.util.LinkedList;

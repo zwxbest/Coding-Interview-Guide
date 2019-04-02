@@ -1,6 +1,6 @@
 package com.tuowazi.code_view_guide.cp02._06;
 
-import base.BaseTest;
+import com.tuowazi.test.BaseTest;
 import com.tuowazi.code_view_guide.cp02._06.JosephusCircle;
 import node.Node;
 import org.junit.Ignore;

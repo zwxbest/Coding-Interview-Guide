@@ -4,12 +4,12 @@ import com.tuowazi.base.sort.AdvanceSort;
 import java.util.Arrays;
 
 /**
- 第n大的元素，时间复杂度O(n)
+ 第n小的元素，时间复杂度O(n)
 
  */
-public class TheBigN extends AdvanceSort {
+public class TheSmallN extends AdvanceSort {
 
-    private int bigN = 0;
+    private int theSmallN = 0;
 
     // 对arr[l...r]部分进行partition操作
     // 返回p, 使得arr[l...p-1] < arr[p] ; arr[p+1...r] > arr[p]
@@ -47,9 +47,9 @@ public class TheBigN extends AdvanceSort {
             return arr[l];
         }
         int p = partition(arr, l, r);
-        if(p ==  bigN -1){
+        if(p ==  theSmallN -1){
             return arr[p];
-        }else if (p < bigN -1 ){
+        }else if (p < theSmallN -1 ){
             return getBigN(arr, p + 1, r);
         }else {
             return   getBigN(arr, l, p - 1);
@@ -58,7 +58,7 @@ public class TheBigN extends AdvanceSort {
 
     public int getBigN(int[] arr) {
         int n = arr.length;
-        if(bigN < 1 || bigN > n){
+        if(theSmallN < 1 || theSmallN > n){
             throw new RuntimeException("n应该大于等于1，小于等于"+n);
         }
         int bigN = getBigN(arr, 0, n - 1);
@@ -66,15 +66,15 @@ public class TheBigN extends AdvanceSort {
     }
 
     public static void main(String[] args) {
-        TheBigN theBigN = new TheBigN();
-        theBigN.bigN = 4;
+        TheSmallN theSmallN = new TheSmallN();
+        theSmallN.theSmallN = 4;
         int[] arr = new int[]{3,6,2,9,1};
-        System.out.println(String.format("在%s中，第%s大的数字是%s", Arrays.toString(arr),theBigN.bigN,theBigN.getBigN(arr)));;
+        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getBigN(arr)));;
         arr = new int[]{1,2,3,6,9};
-        System.out.println(String.format("在%s中，第%s大的数字是%s", Arrays.toString(arr),theBigN.bigN,theBigN.getBigN(arr)));
+        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getBigN(arr)));
         arr = new int[]{9,6,3,2,1};
-        System.out.println(String.format("在%s中，第%s大的数字是%s", Arrays.toString(arr),theBigN.bigN,theBigN.getBigN(arr)));
+        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getBigN(arr)));
         arr = new int[]{6,6,6,6,6};
-        System.out.println(String.format("在%s中，第%s大的数字是%s", Arrays.toString(arr),theBigN.bigN,theBigN.getBigN(arr)));
+        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getBigN(arr)));
     }
 }

@@ -1,6 +1,6 @@
 package com.tuowazi.code_view_guide.cp01._06;
 
-import base.BaseTest;
+import com.tuowazi.test.BaseTest;
 import org.junit.Test;
 
 /**

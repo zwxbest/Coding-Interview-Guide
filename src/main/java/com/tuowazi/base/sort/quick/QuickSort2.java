@@ -5,6 +5,7 @@ import com.tuowazi.base.sort.BaseSort;
 
 /**
  * 很多相同元素，普通的快速排序算法会造成分割不均衡的问题
+ * 和partition相同的元素被随机打散在两边
  */
 public class QuickSort2 extends AdvanceSort {
 

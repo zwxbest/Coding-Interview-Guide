@@ -1,6 +1,6 @@
 package com.tuowazi.code_view_guide.cp02._07;
 
-import base.BaseTest;
+import com.tuowazi.test.BaseTest;
 import java.util.Stack;
 import node.Node;
 import org.junit.Ignore;

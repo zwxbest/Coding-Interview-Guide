@@ -1,4 +1,4 @@
-package base;
+package com.tuowazi.test;
 
 import org.hamcrest.core.IsEqual;
 import org.junit.Assert;

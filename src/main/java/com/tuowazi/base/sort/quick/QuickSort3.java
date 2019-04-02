@@ -3,20 +3,17 @@ package com.tuowazi.base.sort.quick;
 import com.tuowazi.base.sort.AdvanceSort;
 
 /**
- * 3路快速排序
- * 分为<v,=v,>v三部分
- * 需要三个指针
- * 为了优化有多个相同元素造成的不平衡问题
+ * 3路快速排序 分为<v,=v,>v三部分 需要三个指针 为了优化有多个相同元素造成的不平衡问题,相比QuickSort2,这个根本不用管和parititon相同的元素
  */
 public class QuickSort3 extends AdvanceSort {
 
     @Override
-    protected String getName(){
+    protected String getName() {
         return "三路快速排序";
     }
 
     // 递归使用快速排序,对arr[l...r]的范围进行排序
-    private  void sort(int[] arr, int l, int r) {
+    private void sort(int[] arr, int l, int r) {
 
         // 对于小规模数组, 使用插入排序
         if (r - l <= 15) {
@@ -36,14 +33,14 @@ public class QuickSort3 extends AdvanceSort {
             //和小于v部分的下一个元素进行交换（一定是==v）
             //交换过去的肯定是小于v，所以处理一下lt++
             //交换过来的是<=v的，所以i++
-            if (arr[i] < v ) {
+            if (arr[i] < v) {
                 swap(arr, i, lt + 1);
                 i++;
                 lt++;
                 //当前读到的元素是>v的
                 //和大于v部分的第二个元素一个元素交换位置
                 //交换过来的数是未读取到数，和v大小比较不确定，所以不需要处理i，处理一下gt--
-            } else if (arr[i] > v ) {
+            } else if (arr[i] > v) {
                 swap(arr, i, gt - 1);
                 gt--;
             } else { // arr[i] == v
@@ -64,7 +61,7 @@ public class QuickSort3 extends AdvanceSort {
     }
 
     @Override
-    public  void sort(int[] arr) {
+    public void sort(int[] arr) {
         int n = arr.length;
         sort(arr, 0, n - 1);
     }

@@ -22,7 +22,7 @@ public class QuickSort extends AdvanceSort {
             compareTimes++;
             if (arr[i] < v) {
                 //小于枢轴点的元素放在左侧
-                //枢轴的位置是变得，但是值是不变的
+                //枢轴的位置是变得，但是值是不变的,最后肯定等于v
                 partition++;
                 //index小于partition的肯定在比v小
                 swap(arr, partition, i);

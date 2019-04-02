@@ -1,6 +1,6 @@
 package cp02._03;
 
-import cp02.node.Node;
+import node.Node;
 
 /**
  * @author zhangweixiao - 19-3-25

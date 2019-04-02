@@ -1,4 +1,4 @@
-package cp02.node;
+package node;
 
 public class DoubleNode {
 

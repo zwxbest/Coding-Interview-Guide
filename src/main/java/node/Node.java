@@ -1,4 +1,4 @@
-package cp02.node;
+package node;
 
 /**
  * @author zhangweixiao - 19-3-22

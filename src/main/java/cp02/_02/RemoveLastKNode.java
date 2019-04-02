@@ -1,7 +1,7 @@
 package cp02._02;
 
-import cp02.node.DoubleNode;
-import cp02.node.Node;
+import node.DoubleNode;
+import node.Node;
 
 /**
  * 在单链表和双链表中删除倒数第K个节点

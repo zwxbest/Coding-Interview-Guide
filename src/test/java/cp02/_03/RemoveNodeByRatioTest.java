@@ -1,7 +1,7 @@
 package cp02._03;
 
 import base.BaseTest;
-import cp02.node.Node;
+import node.Node;
 import org.junit.Test;
 
 /**

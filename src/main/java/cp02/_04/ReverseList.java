@@ -1,7 +1,7 @@
 package cp02._04;
 
-    import cp02.node.DoubleNode;
-    import cp02.node.Node;
+    import node.DoubleNode;
+    import node.Node;
 
 /**
  * @author zhangweixiao - 19-3-26

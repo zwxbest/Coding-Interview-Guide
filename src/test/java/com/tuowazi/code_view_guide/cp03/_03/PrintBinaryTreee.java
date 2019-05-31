@@ -13,7 +13,7 @@ public class PrintBinaryTreee {
         BiNode head= new BiNode(1);
         head.left = new BiNode(2);
         head.left.left = new BiNode(4);
-        head.left.right = new BiNode(7);
+        head.left.left.right = new BiNode(7);
 
         head.right = new BiNode(3);
         head.right.left= new BiNode(5);

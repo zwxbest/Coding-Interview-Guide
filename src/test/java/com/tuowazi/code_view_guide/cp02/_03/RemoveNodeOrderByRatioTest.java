@@ -7,7 +7,7 @@ import org.junit.Test;
 /**
  * @author zhangweixiao - 19-3-25
  */
-public class RemoveNodeByRatioTest extends BaseTest {
+public class RemoveNodeOrderByRatioTest extends BaseTest {
 
     private RemoveNodeByRatio removeNodeByRatio = new RemoveNodeByRatio();
 

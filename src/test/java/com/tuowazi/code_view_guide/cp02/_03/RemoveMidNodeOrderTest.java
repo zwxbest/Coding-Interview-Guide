@@ -9,7 +9,7 @@ import org.junit.Test;
  * @author zhangweixiao - 19-3-25
  */
 @Ignore
-public class RemoveMidNodeTest extends BaseTest {
+public class RemoveMidNodeOrderTest extends BaseTest {
 
     protected static RemoveMidNode1 removeMidNode;
 

@@ -4,7 +4,7 @@ import com.tuowazi.test.BaseTest;
 import node.DoubleNode;
 import org.junit.Test;
 
-public class RemoveLastKNodeTest2 extends BaseTest {
+public class RemoveLastKNodeOrderTest2 extends BaseTest {
 
     RemoveLastKNode removeLastKNode = new RemoveLastKNode();
 

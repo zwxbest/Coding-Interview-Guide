@@ -20,6 +20,7 @@ public class NodeOrder extends BaseTest {
     public static class Node{
         int id;
         int nextId;
+        int preId;
         public Node(int id){
             this.id = id;
         }

@@ -25,6 +25,7 @@ public class MaxLength {
         }
         return res;
     }
+
     /**
      * 二分法计算
      */

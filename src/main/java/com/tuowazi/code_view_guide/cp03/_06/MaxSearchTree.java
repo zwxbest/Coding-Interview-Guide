@@ -16,8 +16,11 @@ public class MaxSearchTree {
 
     private BiNode posOrder(BiNode head, int[] record) {
         if (head == null) {
+            //0
             record[0] = 0;
+            //1存最小值
             record[1] = Integer.MAX_VALUE;
+            //2存最大值
             record[2] = Integer.MIN_VALUE;
             return null;
         }

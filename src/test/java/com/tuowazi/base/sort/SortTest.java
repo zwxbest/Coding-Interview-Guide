@@ -40,6 +40,13 @@ public class SortTest extends BaseTest {
         assertEqual(arr,new int[]{2,2,2,2,2});
     }
 
+    @Test
+    public void testManySame(){
+        int[] arr = new int[]{3,2,2,1,2,2,2,2,2};
+        baseSort.sort(arr);
+        assertEqual(arr,new int[]{1,2,2,2,2,2,2,2,3});
+    }
+
     /**
      * 测试稳定性
      */

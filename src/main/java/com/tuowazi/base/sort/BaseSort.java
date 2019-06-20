@@ -43,6 +43,9 @@ public class BaseSort {
     }
 
     protected  void swap(int[] arr, int a, int b) {
+        if(a == b){
+            return;
+        }
         int temp = arr[a];
         arr[a] = arr[b];
         arr[b] = temp;

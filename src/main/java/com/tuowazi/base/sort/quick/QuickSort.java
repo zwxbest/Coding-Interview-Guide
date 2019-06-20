@@ -30,9 +30,7 @@ public class QuickSort extends AdvanceSort {
         }
         //最后parition所在位置的左边都是比v小的
         //将枢轴点放到该在的位置，这样小于枢轴点的就在左侧了
-        if (left != partition) {
-            swap(arr, left, partition);
-        }
+        swap(arr, left, partition);
         //返回枢轴的位置
         return partition;
     }

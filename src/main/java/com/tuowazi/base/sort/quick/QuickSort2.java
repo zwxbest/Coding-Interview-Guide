@@ -18,7 +18,7 @@ public class QuickSort2 extends AdvanceSort {
     // 返回p, 使得arr[l...p-1] < arr[p] ; arr[p+1...r] > arr[p]
     private  int partition(int[] arr, int left, int right) {
         // 随机在arr[l...r]的范围中, 选择一个数值作为标定点pivot
-        swap(arr, left, (int) (Math.random() * (right - left + 1)) + left);
+//        swap(arr, left, (int) (Math.random() * (right - left + 1)) + left);
 
         int v = arr[left];
 
@@ -29,7 +29,7 @@ public class QuickSort2 extends AdvanceSort {
             // 注意这里的边界, arr[i].compareTo(v) < 0, 不能是arr[i].compareTo(v) <= 0
             // 思考一下为什么?
             //从左往右找，找到第一个>=v的停止
-            while (i <= right && arr[i] < v){
+            while (i < right && arr[i] < v){
                 i++;
             }
             // 注意这里的边界, arr[j].compareTo(v) > 0, 不能是arr[j].compareTo(v) >= 0
@@ -38,7 +38,7 @@ public class QuickSort2 extends AdvanceSort {
             while (j >= left + 1 && arr[j] > v){
                 j--;
             }
-            if (i > j){
+            if (i >= j){
                 break;
             }
             //交换两个停止的指针，这里只是分割，分割完成后的两部分并不有序。
@@ -57,9 +57,14 @@ public class QuickSort2 extends AdvanceSort {
     // 递归使用快速排序,对arr[l...r]的范围进行排序
     private  void sort(int[] arr, int l, int r) {
 
-        // 对于小规模数组, 使用插入排序
-        if (r - l <= 15) {
-            insertionSort(arr, l, r);
+//        // 对于小规模数组, 使用插入排序
+//        if (r - l <= 15) {
+//            insertionSort(arr, l, r);
+//            return;
+//        }
+
+        //l==r也return
+        if (l >= r) {
             return;
         }
         int p = partition(arr, l, r);

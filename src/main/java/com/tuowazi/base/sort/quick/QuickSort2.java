@@ -25,18 +25,22 @@ public class QuickSort2 extends AdvanceSort {
         //小于v的从最左边开始，大于v的从最右边开始，注意不要等于v
         // arr[l+1...i) < v; arr(j...r] > v
         int i = left + 1, j = right;
+        int partitionLeft = 0;
+        int partitionRight = 0;
         while (true) {
             // 注意这里的边界, arr[i].compareTo(v) < 0, 不能是arr[i].compareTo(v) <= 0
             // 思考一下为什么?
             //从左往右找，找到第一个>=v的停止
-            while (i < right && arr[i] < v){
+            while (i <= right && arr[i] < v) {
                 i++;
+                partitionLeft++;
             }
             // 注意这里的边界, arr[j].compareTo(v) > 0, 不能是arr[j].compareTo(v) >= 0
             // 思考一下为什么?
             //从右往左找，找到第一个<=v的停止
             while (j >= left + 1 && arr[j] > v){
                 j--;
+                partitionRight++;
             }
             if (i >= j){
                 break;
@@ -46,11 +50,10 @@ public class QuickSort2 extends AdvanceSort {
             i++;
             j--;
         }
-
-        swap(arr, left, i);
+        swap(arr, left, left+partitionLeft);
 //        swap(arr, left, j);都可以
 
-        return j;
+        return right-partitionRight;
     }
 
 

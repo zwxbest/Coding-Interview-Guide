@@ -1,18 +1,18 @@
 package com.tuowazi.base.sort;
 
-import com.tuowazi.base.sort.quick.QuickSort1;
 import com.tuowazi.base.sort.quick.QuickSort2;
+import com.tuowazi.base.sort.quick.QuickSort3;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 /**
  * @author zhangweixiao - 19-4-2
  */
-public class QuickSort2Test extends SortTest {
+public class QuickSort3Test extends SortTest {
 
     @BeforeClass
     public static void beforeClass(){
-        baseSort = new QuickSort2();
+            baseSort = new QuickSort3();
     }
 
     @Test

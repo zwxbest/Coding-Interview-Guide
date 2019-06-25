@@ -52,7 +52,7 @@ public class SortTest extends BaseTest {
      */
     @Test
     public void stableTest(){
-        int[] arr = new int[]{5,3,3,4,3,8,9,10,11};
+        int[] arr = new int[]{2,3,1,1};
         baseSort.sort(arr);
     }
 }

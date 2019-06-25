@@ -56,7 +56,7 @@ public class TheSmallN extends AdvanceSort {
         }
     }
 
-    public int getBigN(int[] arr) {
+    public int getSmallN(int[] arr) {
         int n = arr.length;
         if(theSmallN < 1 || theSmallN > n){
             throw new RuntimeException("n应该大于等于1，小于等于"+n);
@@ -69,12 +69,12 @@ public class TheSmallN extends AdvanceSort {
         TheSmallN theSmallN = new TheSmallN();
         theSmallN.theSmallN = 4;
         int[] arr = new int[]{3,6,2,9,1};
-        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getBigN(arr)));;
+        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getSmallN(arr)));;
         arr = new int[]{1,2,3,6,9};
-        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getBigN(arr)));
+        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getSmallN(arr)));
         arr = new int[]{9,6,3,2,1};
-        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getBigN(arr)));
+        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getSmallN(arr)));
         arr = new int[]{6,6,6,6,6};
-        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getBigN(arr)));
+        System.out.println(String.format("在%s中，第%s小的数字是%s", Arrays.toString(arr),theSmallN.theSmallN,theSmallN.getSmallN(arr)));
     }
 }

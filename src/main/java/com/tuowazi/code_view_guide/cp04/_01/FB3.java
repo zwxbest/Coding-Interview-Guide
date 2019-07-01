@@ -14,6 +14,7 @@ public class FB3 {
         }
         int[][] base = {{1, 1}, {1, 0}};
         int[][] res = matrixPower(base, n - 2);
+        //取第一个数
         return res[0][0] + res[1][0];
 
     }

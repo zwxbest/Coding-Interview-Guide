@@ -48,6 +48,9 @@ public class MaxCommonArray {
             } else if (m > 0 && dp[m][n] == dp[m - 1][n]) {
                 m--;
             } else {
+                //如果dp[m][n]==dp[m-1][n-1],也就是str1[m]!=str2[n],
+                // 那么dp[m][n] == dp[m-1][n]也成立
+                //不可能出现dp[m][n]==dp[m-1][n-1],dp[m-1][n] = dp[m-1][n-1]+1的情况
                 res[index--] = chs1[m];
                 m--;
                 n--;
